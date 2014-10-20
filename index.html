@@ -3,34 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <title>EU VAT Rates Web Service</title>
+
+    <style type="text/css">
+        html, body {
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            min-height: 100%;
+
+            background: #1f4a7f -webkit-gradient(linear,left top,left bottom,color-stop(0,#2d5586),color-stop(1,#1d4475));
+            background: #1f4a7f -webkit-linear-gradient(top,#2d5586 0,#1d4475 100%);
+            background: #1f4a7f -moz-linear-gradient(top,#2d5586 0,#1d4475 100%);
+            background: #1f4a7f -o-linear-gradient(top,#2d5586 0,#1d4475 100%);
+            background: #1f4a7f -ms-linear-gradient(top,#2d5586 0,#1d4475 100%);
+            background: #1f4a7f linear-gradient(top,#2d5586 0,#1d4475 100%);
+
+            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#2d5586, endColorstr=#1d4475)";
+        }
+
+        .main {
+            max-width: 40em;
+            margin: 0 auto;
+            -webkit-box-shadow: 0 10px 10px 5px rgba(50, 50, 50, 0.75);
+            -moz-box-shadow:    0 10px 10px 5px rgba(50, 50, 50, 0.75);
+            box-shadow:         0 10px 10px 5px rgba(50, 50, 50, 0.75);
+
+            padding: 2em;
+
+            background: #fff;
+        }
+
+        @media (min-width: 400px) {
+            .divide aside {
+                width: 48%;
+                float: left;
+                padding-right: 2%;
+            }
+            .divide aside h2 {
+                margin-top: 0;
+            }
+        }
+
+        h1, h2 {
+            font-family: Georgia, Gentium, "Times New Roman", Times, serif;
+            color: #1f4a7f;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        a {
+            color: #1f4a7f;
+        }
+        a:hover {
+            color: #1d4475;
+        }
+    </style>
 </head>
 <body>
 
-<h1>Welcome to the EU VAT Rates Web Service</h1>
+<section class="main">
+    <h1>Welcome to the EU VAT Rates Web Service</h1>
 
-<p>Born out of the need to have some sort of web service or API to retrieve current VAT Rates to apply the 2015 EU VAT Regulation, this is it.</p>
+    <p>Born out of the need to have some sort of web service or API to retrieve current VAT Rates to apply the 2015 EU VAT Regulation, this Sunday night hack-a-thon is exactly that.</p>
 
-<p>Do not rely on this yet. It's as alpha as it gets and may be discontinued without warning. </p>
+    <p>Do not rely on this in production (or something meaning to go to production). It's super alpha and may be discontinued without warning. </p>
 
-<h2>How it works</h2>
+    <h2>How it works</h2>
 
-<p>Simply load <code>http://euvatrates.com/rates.json</code> (<a href="rates.json">Click!</a>) and use the data to apply the proper VAT rates in your cart or checkout system. </p>
+    <p>Simply load <code>http://euvatrates.com/rates.json</code> (<a href="rates.json">Click!</a>) and use the data to apply the proper VAT rates in your cart or checkout system. </p>
 
-<p>Considering these VAT rates rarely change, <b>cache the data on your system</b>. If you repeatedly hit the server and steal up the bandwidth, you risk getting blocked from accessing this free service. </p>
+    <p>Considering these VAT rates rarely change, <b>cache the data on your system</b>. If you repeatedly hit the server and steal up the bandwidth, you risk getting blocked from accessing this free service. </p>
 
-<h2>Contribute!</h2>
+    <p>The data structure is pretty self explanatory JSON. There's a last_updated timestamp that tells you when the last VAT change (or bug fix) was made, and there is a disclaimer. The <code>rates</code> object contains all the different rates per country, based on its 2 character key. </p>
 
-<p>Is the data incorrect? Don't like the site design? Want to see more features? <a href="https://github.com/modmore/euvatrates.com">Contribute on GitHub</a></p>
+    <p>The rate object contains the country name, and a couple of different tax rates that exist in the country. The currently returned rate types are <code>standard_rate</code>, <code>reduced_rate</code>, <code>reduced_rate_alt</code>, <code>super_reduced_rate</code> and <code>parking_rate</code>. The values are always numeric (with decimals), or a boolean <code>false</code> if the rate is not used in the country.</p>
 
-<h2>Share & Reach out</h2>
+    <p>Which VAT rate you need to use, depends on the type of product or service you are providing and to whom you are providing it. It is best to consult someone knowledgeable, like your accountant on that. <a href="http://ec.europa.eu/taxation_customs/resources/documents/taxation/vat/how_vat_works/rates/vat_rates_en.pdf" target="_blank">This official EU Document also contains a table indicating what rates to apply.</a> Exceptions or exemptions may apply per country.</p>
 
-<p>Find me on Twitter <a href="https://twitter.com/mark_hamstra">@mark_hamstra</a> or email hello [youknowhatgoeshere] markhamstra.com</p>
+    <section class="divide">
+        <aside>
+            <h2>Contact</h2>
+            <p>Find me on Twitter <a href="https://twitter.com/mark_hamstra">@mark_hamstra</a> or email hello [youknowhatgoeshere] markhamstra.com</p>
+        </aside>
 
-<h2>Sources</h2>
+        <h2>Contribute!</h2>
+        <p>Is the data incorrect? Don't like the site design? Want to see more features? <a href="https://github.com/modmore/euvatrates.com">Contribute on GitHub</a></p>
+    </section>
 
-<ul>
-    <li><a href="http://ec.europa.eu/taxation_customs/resources/documents/taxation/vat/how_vat_works/rates/vat_rates_en.pdf">VAT Rates Applied in the Member States of the European Union</a> (PDF)</li>
-</ul>
+    <section class="divide">
+        <aside>
+            <h2>Data Sources</h2>
+
+            <ul>
+                <li><a href="http://ec.europa.eu/taxation_customs/resources/documents/taxation/vat/how_vat_works/rates/vat_rates_en.pdf" target="_blank">VAT Rates Applied in the Member States of the European Union</a> (PDF, retrieved October 20th, 2014)</li>
+            </ul>
+        </aside>
+
+        <h2>Donate</h2>
+        <p>paypal@markhamstra.com</p>
+    </section>
+
+</section>
 
 </body>
 </html>
