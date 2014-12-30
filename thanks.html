@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>EU VAT Rates Web Service</title>
+    <title>Thanks for your donation to the EU VAT Rates Web Service!</title>
 
     <meta name="description" content="Simple Web Service to load the VAT Rates for all countries in the European Union from official sources.">
     <meta name="author" content="Mark Hamstra">
@@ -37,7 +37,6 @@
 
             background: #fff;
         }
-
         .divide {
             padding-bottom: 1em;
         }
@@ -87,23 +86,9 @@
 <body>
 
 <section class="main">
-    <h1>Welcome to the EU VAT Rates Web Service</h1>
+    <h1>Thank you for your donation!</h1>
 
-    <p>This static web service provides a simple to consume JSON document, containing a list of VAT rates per country in the European Union. It can be used to automatically grab the right VAT right to comply with the 2015 EU VAT Changes. As it's a free service, use is at your own risk. </p>
-
-    <p><a href="https://github.com/modmore/euvatrates.com" target="_blank">You can contribute to this service on Github!</a></p>
-
-    <h2>How it works</h2>
-
-    <p>Simply load <code>https://euvatrates.com/rates.json</code> (<a href="rates.json" target="_blank">Click!</a>) and use the data to apply the proper VAT rates in your cart or checkout system. </p>
-
-    <p>Considering these VAT rates rarely change, <b>cache the data on your system</b>. If you repeatedly hit the server and steal up the bandwidth, you risk getting blocked from accessing this free service. </p>
-
-    <p>The data structure is pretty self explanatory JSON. There's a last_updated timestamp in the root that tells you when the last VAT change (or bug fix) was made, and there is a disclaimer. The <code>rates</code> object contains all the different rates per country, based on its 2 character country code. </p>
-
-    <p>The rate object contains the country name, and a couple of different tax rates that exist in the country. The currently returned rate types are <code>standard_rate</code>, <code>reduced_rate</code>, <code>reduced_rate_alt</code>, <code>super_reduced_rate</code> and <code>parking_rate</code>. The values are always numeric (with decimals), or a boolean <code>false</code> if the rate is not used in the country.</p>
-
-    <p>Which VAT rate you need to use, depends on the type of product or service you are providing and to whom you are providing it. It is best to consult someone knowledgeable, like your accountant on that. <a href="http://ec.europa.eu/taxation_customs/resources/documents/taxation/vat/how_vat_works/rates/vat_rates_en.pdf" target="_blank">This official EU Document also contains a table indicating what rates to apply.</a> Exceptions or exemptions may apply per country.</p>
+    <p><img src="youreawesome.gif" alt="You're awesome!" style="width: 100%;"></p>
 
     <section class="divide">
         <section>
@@ -147,15 +132,6 @@
             <ul>
                 <li><a href="http://ec.europa.eu/taxation_customs/resources/documents/taxation/vat/how_vat_works/rates/vat_rates_en.pdf" target="_blank">VAT Rates Applied in the Member States of the European Union</a> (PDF, retrieved October 20th, 2014)</li>
             </ul>
-
-            <h2>Make a Donation</h2>
-
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                <input type="hidden" name="cmd" value="_s-xclick">
-                <input type="hidden" name="hosted_button_id" value="RXUGWVFHHUHNS">
-                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                <img alt="" border="0" src="https://www.paypalobjects.com/nl_NL/i/scr/pixel.gif" width="1" height="1">
-            </form>
         </aside>
     </section>
 
