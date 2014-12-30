@@ -148,7 +148,7 @@
             "parking_rate": false
         },
         "NL": {
-            "country": "The Netherlands",
+            "country": "Netherlands",
             "standard_rate": 21.00,
             "reduced_rate": 6.00,
             "reduced_rate_alt": false,
