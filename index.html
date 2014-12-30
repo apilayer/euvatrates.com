@@ -82,6 +82,11 @@
         #mc_embed_signup form {
             padding: 0;
         }
+        code {
+            font-family: "Courier New", Courier, monospace;
+            background-color: #eee;
+            color: #1f4a7f;
+        }
     </style>
 </head>
 <body>
@@ -104,6 +109,8 @@
     <p>The rate object contains the country name, and a couple of different tax rates that exist in the country. The currently returned rate types are <code>standard_rate</code>, <code>reduced_rate</code>, <code>reduced_rate_alt</code>, <code>super_reduced_rate</code> and <code>parking_rate</code>. The values are always numeric (with decimals), or a boolean <code>false</code> if the rate is not used in the country.</p>
 
     <p>Which VAT rate you need to use, depends on the type of product or service you are providing and to whom you are providing it. It is best to consult someone knowledgeable, like your accountant on that. <a href="http://ec.europa.eu/taxation_customs/resources/documents/taxation/vat/how_vat_works/rates/vat_rates_en.pdf" target="_blank">This official EU Document also contains a table indicating what rates to apply.</a> Exceptions or exemptions may apply per country.</p>
+
+    <p>For convenience, the United Kingdom and Greece are included both by their EU country code (UK and EL), as well as their ISO country code (GB and GR). The ISO duplicates contain a <code>iso_duplicate_of</code> element referring to the EU country code, and the originals contain a <code>iso_duplicate</code> element that contains the ISO Country code.</p>
 
     <section class="divide">
         <section>
@@ -162,6 +169,7 @@
 
     <h2>Recent Changes</h2>
     <ul>
+        <li>[2014-12-30] Include <code>GB</code> and <code>GR</code> rates elements as duplicates of the <code>UK</code> and <code>EL</code> elements to deal with how differences in how the EU and ISO hav determined country codes. The duplicates (the ISO representation: GB and GR) contain a new <code>iso_duplicate_of</code> element referring to the EU-style country code. The originals (the EU representation: UK and EL) contain a new <code>iso_duplicate</code> element, referring to the ISO-style country code.</li>
         <li>[2014-12-30] Remove "The" from "The Netherlands" again (#1)</li>
         <li>[2014-11-07] Fix typo in Finland, add "The" to "The Netherlands"</li>
     </ul>
