@@ -94,7 +94,7 @@
 <section class="main">
     <h1>Welcome to the EU VAT Rates Web Service</h1>
 
-    <p>This static web service provides a simple to consume JSON document, containing a list of VAT rates per country in the European Union. It can be used to automatically grab the right VAT right to comply with the 2015 EU VAT Changes. As it's a free service, use is at your own risk. This project is licenses under the MIT License.</p>
+    <p>This static web service provides a simple to consume JSON document, containing a list of VAT rates per country in the European Union. It can be used to automatically grab the right VAT right to comply with the 2015 EU VAT Changes. As it's a free service, use is at your own risk. This project is licensed under the MIT License.</p>
 
     <p><a href="https://github.com/modmore/euvatrates.com" target="_blank">You can contribute to this service on Github!</a> Please <a href="#subscribe">subscribe to the newsletter</a> to receive important information about the service (such as VAT or format changes). </p>
 
@@ -102,9 +102,9 @@
 
     <p>Simply load <code>https://euvatrates.com/rates.json</code> (<a href="rates.json" target="_blank">Click!</a>) and use the data to apply the proper VAT rates in your cart or checkout system. </p>
 
-    <p>Considering these VAT rates rarely change, <b>cache the data on your system</b>. If you repeatedly hit the server and steal up the bandwidth, you risk getting blocked from accessing this free service. </p>
+    <p>Considering these VAT rates rarely change, <b>cache the data on your system</b>. If you repeatedly hit the server and steal up the bandwidth, you risk getting blocked from accessing this free service. Alternatively, if you'd like to self-host the rates.json file, it's possible to <a href="https://github.com/modmore/euvatrates.com">clone the repository</a> or to install it into your project with <a href="http://bower.io">Bower</a>: <code>bower install euvatrates.com</code></p>
 
-    <p>The data structure is pretty self explanatory JSON. There's a last_updated timestamp in the root that tells you when the last VAT change (or bug fix) was made, and there is a disclaimer. The <code>rates</code> object contains all the different rates per country, based on its 2 character country code. </p>
+    <p>The data structure is pretty self explanatory JSON. There's a <code>last_updated</code> ISO 8601 timestamp in the root that tells you when the last VAT change (or bug fix) was made, and there is a disclaimer. The <code>rates</code> object contains all the different rates per country, based on its 2 character country code. </p>
 
     <p>The rate object contains the country name, and a couple of different tax rates that exist in the country. The currently returned rate types are <code>standard_rate</code>, <code>reduced_rate</code>, <code>reduced_rate_alt</code>, <code>super_reduced_rate</code> and <code>parking_rate</code>. The values are always numeric (with decimals), or a boolean <code>false</code> if the rate is not used in the country.</p>
 

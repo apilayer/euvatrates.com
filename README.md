@@ -1,7 +1,11 @@
 EU VAT Rates Web Service
 ==============
 
-See the website at euvatrates.com for all information about this project.
+See the website at https://euvatrates.com for all information about this project.
+
+## Usage
+
+You can simply request `https://euvatrates.com/rates.json` to load the data, or you can self-host the information by cloning the repository. The project is also on Bower if that's your thing: `bower install euvatrates.com`
 
 ## Contributing
 
