@@ -169,6 +169,7 @@
 
     <h2>Recent Changes</h2>
     <ul>
+        <li>[2014-12-30] <code>last_updated</code> timestamp is now formatted according to ISO 8601</li>
         <li>[2014-12-30] Include <code>GB</code> and <code>GR</code> rates elements as duplicates of the <code>UK</code> and <code>EL</code> elements to deal with how differences in how the EU and ISO hav determined country codes. The duplicates (the ISO representation: GB and GR) contain a new <code>iso_duplicate_of</code> element referring to the EU-style country code. The originals (the EU representation: UK and EL) contain a new <code>iso_duplicate</code> element, referring to the ISO-style country code.</li>
         <li>[2014-12-30] Remove "The" from "The Netherlands" again (#1)</li>
         <li>[2014-11-07] Fix typo in Finland, add "The" to "The Netherlands"</li>
