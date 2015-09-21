@@ -58,7 +58,7 @@
             "country": "Greece",
             "standard_rate": 23.00,
             "reduced_rate": 13.00,
-            "reduced_rate_alt": 6.50,
+            "reduced_rate_alt": 6.00,
             "super_reduced_rate": false,
             "parking_rate": false
         },
@@ -69,7 +69,7 @@
             "country": "Greece",
             "standard_rate": 23.00,
             "reduced_rate": 13.00,
-            "reduced_rate_alt": 6.50,
+            "reduced_rate_alt": 6.00,
             "super_reduced_rate": false,
             "parking_rate": false
         },
