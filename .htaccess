@@ -1,0 +1,4 @@
+Options -indexes
+
+ExpiresActive On
+ExpiresByType application/json "access plus 2 weeks"
