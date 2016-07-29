@@ -71,7 +71,7 @@
             "_comment": "While the EU uses the country code 'EL' for Greece, ISO uses 'GR' - both are included for convenience.",
             "iso_duplicate": "GR",
             "country": "Greece",
-            "standard_rate": 23.00,
+            "standard_rate": 24.00,
             "reduced_rate": 13.00,
             "reduced_rate_alt": 6.00,
             "super_reduced_rate": false,
