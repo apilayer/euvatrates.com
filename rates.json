@@ -201,7 +201,7 @@
         },
         "RO": {
             "country": "Romania",
-            "standard_rate": 20.00,
+            "standard_rate": 19.00,
             "reduced_rate": 9.00,
             "reduced_rate_alt": 5.00,
             "super_reduced_rate": false,
