@@ -1,5 +1,5 @@
 {
-    "last_updated": "2017-12-15T17:16Z",
+    "last_updated": "2018-01-19:30:00Z",
     "disclaimer": "This data is compiled from official European Commission sources to be as accurate as possible, however no guarantee of accuracy is provided. Use at your own risk. Don't trust random people on the internet without doing your own research.",
     
     "rates": {
@@ -180,6 +180,14 @@
             "standard_rate": 21.00,
             "reduced_rate": 6.00,
             "reduced_rate_alt": false,
+            "super_reduced_rate": false,
+            "parking_rate": false
+        },
+        "NO": {
+            "country": "Norway",
+            "standard_rate": 25.00,
+            "reduced_rate": 15.00,
+            "reduced_rate_alt": 12.00,
             "super_reduced_rate": false,
             "parking_rate": false
         },
