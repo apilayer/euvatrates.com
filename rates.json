@@ -53,8 +53,8 @@
         },
         "DE": {
             "country": "Germany",
-            "standard_rate": 16.00,
-            "reduced_rate": 5.00,
+            "standard_rate": 19.00,
+            "reduced_rate": 7.00,
             "reduced_rate_alt": false,
             "super_reduced_rate": false,
             "parking_rate": false
